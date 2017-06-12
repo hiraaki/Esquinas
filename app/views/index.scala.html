@@ -1,0 +1,19 @@
+@(message: String)
+
+@main("Welcome to Plots") {
+
+    <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClQQ5144kE4ywvjc3762fZgYTKPPDMIhA&callback=initMap">
+    </script>
+
+
+    <div id="floating-panel">
+        <button onclick="addble()">Adicionar Icones</button>
+        <button onclick="removable()">Remover Icones</button><br>
+        <input type="text" value="Primeira Rua" id="Rua1">
+        <input type="text" value="Segunda Rua" id="Rua2">
+        <button action="recenter()">Pesquisar</button>
+
+    </div>>
+}
