@@ -19,6 +19,16 @@ create table esquina (
   constraint pk_esquina primary key (id)
 );
 
+create table esquina_csv (
+  id                            bigserial not null,
+  bairro                        varchar(255),
+  rua1                          varchar(255),
+  rua2                          varchar(255),
+  longitude                     float,
+  latitude                      float,
+  constraint pk_esquina_csv primary key (id)
+);
+
 create table rua (
   id                            bigserial not null,
   nome                          varchar(255),
@@ -49,6 +59,8 @@ drop index if exists ix_esquina_rua2_id;
 drop table if exists bairro cascade;
 
 drop table if exists esquina cascade;
+
+drop table if exists esquina_csv cascade;
 
 drop table if exists rua cascade;
 
